@@ -100,10 +100,47 @@ function test.testHeap()
     print(lh:Pop())
 end
 
+function test.testTreeMap()
+    print("----- LuaTreeMap -----")
+    local LuaTreeMap = require("lua-structs/LuaTreeMap")
+    local ltm = LuaTreeMap.New()
+
+    ltm:Add(3,3)
+    print(ltm:Count())
+    print(ltm)
+    ltm:Remove(3)
+    print(ltm)
+    ltm:Add(1,2)
+    print(ltm)
+
+    ltm:Add(100,3)
+    print(ltm)
+
+    ltm:Add(2,"o")
+    print(ltm:Count())
+    print(ltm)
+
+    ltm:Add(80,"s")
+    print(ltm)
+
+    ltm:Remove(3)
+    print(ltm)
+
+    ltm:Add(16,"a")
+    ltm:Add(14,"s")
+    ltm:Add(13,"w")
+    ltm:Add(19,"d")
+    print(ltm)
+
+    ltm:Remove(1)
+    ltm:Remove(2)
+    print(ltm)
+end
+
 test.testStack()
 test.testQueue()
 test.testList()
 test.testHeap()
+test.testTreeMap()
 
 return test
-

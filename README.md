@@ -7,3 +7,5 @@ Data structures implemented in Lua including:
 - List
 
 - Heap
+
+- TreeMap
